@@ -851,7 +851,7 @@ obj-y += c.o
 
 **open**
 
-![image-20240521164919827](pic/%E9%9F%A6Linux%E5%BA%94%E7%94%A8(4)/image-20240521164919827.png)
+![image-20240521164919827](pic/%E9%9F%A6Linux%E5%BA%94%E7%94%A8(4)/IO_read.png)
 
 ```c
 #include <sys/types.h>
@@ -1128,11 +1128,11 @@ make install
     如果你编译的是一个库，请把得到的头文件、库文件放入工具链的`include`、`lib`目录里。别的程序要使用这些头文件、库时，会很方便。
     工具链里可能有多个include、lib目录，放到哪里去？
     执行下面命令来确定目录：
-  
+
   ```shell
   echo 'main(){}'| arm-buildroot-linux-gnueabihf-gcc -E -v –
   ```
-  
+
     它会列出头文件目录、库目录(LIBRARY_PATH)。
 2. 把库文件放到板子上的`/lib`或`/usr/lib`目录里
     程序在板子上运行时，需要用到板子上`/lib` 或`/usr/lib` 下的库文件；程序运行时不需要头文件。
